@@ -68,9 +68,9 @@ add_executable(trafficScore
         gdbGenerator/OracleGenerator.h
         modelCreator/SimpleModel.cpp
         modelCreator/SimpleModel.h
-        ScoreCalculator/IScore.h
-        ScoreCalculator/SimpleCalculator.cpp
-        ScoreCalculator/SimpleCalculator.h
+        scoreCalculator/IScore.h
+        scoreCalculator/SimpleCalculator.cpp
+        scoreCalculator/SimpleCalculator.h
         tools/MyLogger.h
         tools/ThreadPool.h)
 
