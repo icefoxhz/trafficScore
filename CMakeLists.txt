@@ -4,7 +4,7 @@ project(trafficScore)
 set(CMAKE_CXX_STANDARD 11)
 
 #SET(CMAKE_BUILD_TYPE "Release")
-SET(CMAKE_BUILD_TYPE "Debug")
+#SET(CMAKE_BUILD_TYPE "Debug")
 
 # 关闭警告
 add_definitions(-w)

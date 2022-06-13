@@ -19,12 +19,12 @@
 #include "../tools/DataBaseTools.h"
 #include "../tools/GdbTools.h"
 
-// 2000坐标系下  1代表111.2公里
-inline double oneMeter()
-{
-//	return 1 / 111.2 / 1000;
-	return 1.0;
-}
+//// 2000坐标系下  1代表111.2公里
+//inline double oneMeter()
+//{
+////	return 1 / 111.2 / 1000;
+//	return 1.0;
+//}
 
 class BaseGenerator
 {

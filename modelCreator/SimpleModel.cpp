@@ -223,7 +223,7 @@ bool SimpleModel::createWktGrid(bool createLayer)
 			goto __last;
 		}
 
-		double sideRealLen = oneMeter() * _pGdbGenerator->m_gridSide;
+		double sideRealLen = _pGdbGenerator->m_gridSide;
 		int rowNum = static_cast<int>((envelope.MaxY - envelope.MinY) / sideRealLen) + 1;
 		int colNum = static_cast<int>((envelope.MaxX - envelope.MinX) / sideRealLen) + 1;
 		LOG4CPLUS_INFO(MyLogger::getInstance(), "需要创建的格网数量: " << rowNum * colNum);
