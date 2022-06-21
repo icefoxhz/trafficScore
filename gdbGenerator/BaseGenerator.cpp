@@ -25,11 +25,11 @@ BaseGenerator::BaseGenerator(string resultTable,
 
 void BaseGenerator::init()
 {
-    double oneIsHowMeter = 1;
+    double oneMeter = 1;
 	try
 	{
 		YAML::Node config = YAML::LoadFile("config.yaml");
-        oneIsHowMeter = config["oneIsHowMeter"].as<double>();
+        oneMeter = config["oneMeter"].as<double>();
 
 		auto bufferDistance = config["bufferDistance"];
 		m_bufferDistance = bufferDistance.as<double>();
@@ -37,8 +37,8 @@ void BaseGenerator::init()
 		m_gridSide = gridSide.as<double>();
 	}catch (...){
 
-		m_bufferDistance = 1000 * oneIsHowMeter;
-		m_gridSide = 100 * oneIsHowMeter;
+		m_bufferDistance = 1000 * oneMeter;
+		m_gridSide = 100 * oneMeter;
 	}
 }
 

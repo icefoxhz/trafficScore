@@ -71,7 +71,7 @@ int main(int argc, char* argv[])
     string dbType = config["dbType"].as<string>();
 
     // 单位1是多少米
-    auto oneIsHowMeter = config["oneIsHowMeter"].as<double>();
+    auto oneMeter = config["oneMeter"].as<double>();
 
 	//	putenv("PGCLIENTENCODING=GBK");
 
@@ -116,8 +116,8 @@ int main(int argc, char* argv[])
 //		"service=192.168.101.153:1521/orcl user=gmsde password=gmsde");
 
         OracleGenerator generator(resultTable, sourceTable, connString);
-        generator.m_gridSide = strtod(gridSize.c_str(), nullptr) * oneIsHowMeter;
-        generator.m_bufferDistance = strtod(bufferDistance.c_str(), nullptr) * oneIsHowMeter;
+        generator.m_gridSide = strtod(gridSize.c_str(), nullptr) * oneMeter;
+        generator.m_bufferDistance = strtod(bufferDistance.c_str(), nullptr) * oneMeter;
         SimpleModel simpleModel(&generator);
         success = simpleModel.work();
     }
@@ -130,8 +130,8 @@ int main(int argc, char* argv[])
 //		"host=10.230.0.66 port=5432 dbname=datamining user=cloud_user password='cgcloud#123_pg'");
 
         PgGenerator generator(resultTable, sourceTable, connString);
-        generator.m_gridSide = strtod(gridSize.c_str(), nullptr)  * oneIsHowMeter;
-        generator.m_bufferDistance = strtod(bufferDistance.c_str(), nullptr)  * oneIsHowMeter;
+        generator.m_gridSide = strtod(gridSize.c_str(), nullptr)  * oneMeter;
+        generator.m_bufferDistance = strtod(bufferDistance.c_str(), nullptr)  * oneMeter;
         SimpleModel simpleModel(&generator);
         success = simpleModel.work();
     }
